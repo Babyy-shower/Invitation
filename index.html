@@ -98,7 +98,7 @@ button{font:inherit;cursor:pointer}.serif{font-family:'Noto Serif Malayalam',ser
 <g class="flt"><path d="M64 330 V352" stroke="#8A6A3A" stroke-width="2"/><g fill="none" stroke-width="6"><ellipse cx="64" cy="376" rx="26" ry="26" stroke="#C0282D"/><ellipse cx="64" cy="376" rx="20" ry="20" stroke="#2E8B57"/><ellipse cx="64" cy="376" rx="14" ry="14" stroke="#E3B74A"/></g></g>
 <g fill="none" stroke-width="7"><ellipse cx="58" cy="520" rx="40" ry="13" stroke="#C0282D"/><ellipse cx="58" cy="532" rx="40" ry="13" stroke="#2E8B57"/><ellipse cx="58" cy="544" rx="40" ry="13" stroke="#E3B74A"/><ellipse cx="58" cy="556" rx="40" ry="13" stroke="#C0282D"/><ellipse cx="58" cy="568" rx="40" ry="13" stroke="#2E8B57"/><ellipse cx="58" cy="580" rx="40" ry="13" stroke="#E3B74A"/></g>
 </svg></div>
-<div class="top"><button class="pill" data-open="bs">Baby Shower</button><button class="pill m" data-open="vala">വളകാപ്പ്</button></div>
+<div class="top"><button class="pill m" data-open="vala">വളകാപ്പ്</button><button class="pill" data-open="bs">Baby Shower</button></div>
 <div class="mid"><div class="halo"></div><div class="babywrap"><svg aria-hidden="true" viewBox="40 60 320 260" width="100%" xmlns="http://www.w3.org/2000/svg">
 <defs>
 <linearGradient id="bskB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6D0B0"/><stop offset="1" stop-color="#E0AB86"/></linearGradient>
@@ -136,8 +136,7 @@ button{font:inherit;cursor:pointer}.serif{font-family:'Noto Serif Malayalam',ser
 </div>
 
 <div id="app" hidden>
-<nav class="tabs"><button class="tab" data-t="bs" aria-pressed="true">Baby Shower</button><button class="tab serif" data-t="vala" aria-pressed="false">വളകാപ്പ്</button></nav>
-
+<nav class="tabs"><button class="tab serif" data-t="vala" aria-pressed="true">വളകാപ്പ്</button><button class="tab" data-t="bs" aria-pressed="false">Baby Shower</button></nav>
 <section id="bs" class="card bs">
 <div class="sky" id="sky">
 <button class="balloon" style="left:12%;background:#F2A99A;--d:0s" aria-label="Pop balloon"></button>
@@ -293,9 +292,9 @@ function show(t){
 }
 function openIt(t){
  if(!opened){opened=true;cover.classList.add('gone');app.hidden=false;setTimeout(function(){app.classList.add('show')},30);}
- show(t||'bs');
+ show(t||'vala');
 }
-document.getElementById('openBtn').addEventListener('click',function(){openIt('bs')});
+document.getElementById('openBtn').addEventListener('click',function(){openIt('vala')});
 document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){openIt(b.dataset.open)})});
 document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.t)})});
 setInterval(function(){
