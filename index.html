@@ -308,7 +308,7 @@ document.querySelectorAll('.balloon').forEach(function(b){
 var hero=document.getElementById('hero');
 hero.addEventListener('click',function(e){burst(e.clientX,e.clientY,'flower')});
 hero.addEventListener('keydown',function(e){if(e.key==='Enter'){var r=hero.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,'flower')}});
-var target=new Date(2026,10,28,16,0,0).getTime();
+var target=new Date('2026-11-29T16:00:00+05:30').getTime();
 function tick(){var s=Math.max(0,Math.floor((target-Date.now())/1000));
  document.getElementById('d').textContent=Math.floor(s/86400);document.getElementById('h').textContent=Math.floor(s%86400/3600);
  document.getElementById('m').textContent=Math.floor(s%3600/60);document.getElementById('s').textContent=s%60;}
